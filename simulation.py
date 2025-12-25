@@ -1,12 +1,14 @@
 # simulation.py
 
+# simulation.py
 import random
 from data import cases, AGENTS, AVG_HANDLING_TIME, SLA_HOURS
+
 
 def simulate_once(cases):
     total_work = 0
     for case in cases:
-        noise = random.uniform(0.8, 1.2)
+        noise = random.uniform(0.9, 1.1)
         total_work += case["complexity"] * noise
     return total_work
 
